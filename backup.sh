@@ -12,9 +12,8 @@ do
     	FolderName=$(basename $Dir);
     	if [ "$FolderName" == "$TargetDir" ]; then
     		echo "$FolderName found!";
-    		#echo "$UserFolder.tar.gz $HomeDir$UserFolder/$FolderName";
         	tar -zcvf ../$UserFolder.tar.gz $HomeDir$UserFolder/$FolderName
-            mv ../$UserFolder.tar.gz $BackupDir
+            	mv ../$UserFolder.tar.gz $BackupDir
     	fi
 	done
 done
