@@ -1,6 +1,6 @@
 BackupDir="/home/john/backup/"
 HomeDir="/home/"
-TargetDir="Desktop"
+TargetDir="public_html"
 
 for user in $(find $HomeDir* -maxdepth 0 -type d ); 
 do
@@ -12,7 +12,9 @@ do
     	FolderName=$(basename $Dir);
     	if [ "$FolderName" == "$TargetDir" ]; then
     		echo "$FolderName found!";
-        	tar -zcvf $BackupDir$UserFolder.tar.gz $HomeDir$UserFolder/$FolderName
+    		#echo "$UserFolder.tar.gz $HomeDir$UserFolder/$FolderName";
+        	tar -zcvf ../$UserFolder.tar.gz $HomeDir$UserFolder/$FolderName
+            mv ../$UserFolder.tar.gz $BackupDir
     	fi
 	done
 done
