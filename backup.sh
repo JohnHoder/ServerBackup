@@ -1,3 +1,5 @@
+#Copyright 2013 Jan Hodermarsky
+
 BackupDir="/home/john/backup/"
 HomeDir="/home/"
 TargetDir="public_html"
